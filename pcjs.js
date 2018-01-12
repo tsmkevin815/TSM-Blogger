@@ -1,6 +1,64 @@
-﻿//<![CDATA[
-// Nightmode
-$(document).ready(function(){$("#nightmode").click(function(){$("body").toggleClass("nightmode-body");$(".header-wrapper2").toggleClass("nightmode-topmenu");$(".mainmenu").toggleClass("nightmode-mainmenu");$("a:link").toggleClass("nightmode-link");$("div.tab").toggleClass("nightmode-tab");$(".post").toggleClass("nightmode-post");$(".sidebar h2").toggleClass("nightmode-sidebartitle");$("#sidebar2 .widget-content").toggleClass("nightmode-sidebar");$(".snippets").toggleClass("nightmode-snippets");$(".post-body").toggleClass("nightmode-postbody");$("span.bigtext").toggleClass("nightmode-bigtext");$("h2.post-title").toggleClass("nightmode-h2");$("a.dangkiblog").toggleClass("nightmode-dangki");$(".sidebar h3").toggleClass("nightmode-sidebartitle1");$("#comments").toggleClass("nightmode-comment");$("#comments h5").toggleClass("nightmode-commenth5");$("#related_img .news-text").toggleClass("nightmode-relatext");$("#comment-editor").toggleClass("nightmode-editor");$("#search_live input").toggleClass("nightmode-search");$(".noiquypc").toggleClass("nightmode-noiquy");$(".noiquycontent").toggleClass("nightmode-content");$(".sidebar .PopularPosts ul li img").toggleClass("nightmode-ppimg");$(".pcgroup img").toggleClass("nightmode-pcgroup");$(".fb-page").toggleClass("nightmode-fb");$("#banbe li").toggleClass("nightmode-banbe")})});
+//<![CDATA[
+// darkmode
+$(document).ready(function() {
+    var status = localStorage.getItem("statusDarkMode");
+    if (status == 1) {
+        $("body").toggleClass("darkmode-body");
+        $(".header-wrapper2").toggleClass("darkmode-topmenu");
+        $(".mainmenu").toggleClass("darkmode-mainmenu");
+        $("a:link").toggleClass("darkmode-link");
+        $("div.tab").toggleClass("darkmode-tab");
+        $(".post").toggleClass("darkmode-post");
+        $(".sidebar h2").toggleClass("darkmode-sidebartitle");
+        $("#sidebar2 .widget-content").toggleClass("darkmode-sidebar");
+        $(".snippets").toggleClass("darkmode-snippets");
+        $(".post-body").toggleClass("darkmode-postbody");
+        $("span.bigtext").toggleClass("darkmode-bigtext");
+        $("h2.post-title").toggleClass("darkmode-h2");
+        $("a.dangkiblog").toggleClass("darkmode-dangki");
+        $(".sidebar h3").toggleClass("darkmode-sidebartitle1");
+        $("#comments").toggleClass("darkmode-comment");
+        $("#comments h5").toggleClass("darkmode-commenth5");
+        $("#related_img .news-text").toggleClass("darkmode-relatext");
+        $("#comment-editor").toggleClass("darkmode-editor");
+        $("#search_live input").toggleClass("darkmode-search");
+        $(".noiquypc").toggleClass("darkmode-noiquy");
+        $(".noiquycontent").toggleClass("darkmode-content");
+        $(".sidebar .PopularPosts ul li img").toggleClass("darkmode-ppimg");
+        $(".pcgroup img").toggleClass("darkmode-pcgroup");
+        $(".fb-page").toggleClass("darkmode-fb");
+        $("#banbe li").toggleClass("darkmode-banbe");
+    }
+    if (status != 1) {
+        $("#darkmode").click(function() {
+            $("body").toggleClass("darkmode-body");
+            $(".header-wrapper2").toggleClass("darkmode-topmenu");
+            $(".mainmenu").toggleClass("darkmode-mainmenu");
+            $("a:link").toggleClass("darkmode-link");
+            $("div.tab").toggleClass("darkmode-tab");
+            $(".post").toggleClass("darkmode-post");
+            $(".sidebar h2").toggleClass("darkmode-sidebartitle");
+            $("#sidebar2 .widget-content").toggleClass("darkmode-sidebar");
+            $(".snippets").toggleClass("darkmode-snippets");
+            $(".post-body").toggleClass("darkmode-postbody");
+            $("span.bigtext").toggleClass("darkmode-bigtext");
+            $("h2.post-title").toggleClass("darkmode-h2");
+            $("a.dangkiblog").toggleClass("darkmode-dangki");
+            $(".sidebar h3").toggleClass("darkmode-sidebartitle1");
+            $("#comments").toggleClass("darkmode-comment");
+            $("#comments h5").toggleClass("darkmode-commenth5");
+            $("#related_img .news-text").toggleClass("darkmode-relatext");
+            $("#comment-editor").toggleClass("darkmode-editor");
+            $("#search_live input").toggleClass("darkmode-search");
+            $(".noiquypc").toggleClass("darkmode-noiquy");
+            $(".noiquycontent").toggleClass("darkmode-content");
+            $(".sidebar .PopularPosts ul li img").toggleClass("darkmode-ppimg");
+            $(".pcgroup img").toggleClass("darkmode-pcgroup");
+            $(".fb-page").toggleClass("darkmode-fb");
+            $("#banbe li").toggleClass("darkmode-banbe")
+        });
+    }
+});
 // Nav
 $(document).ready(function(){$(".toggleMenu").click(function(){$(".dropdowns").toggleClass("shows");});});
 $(document).ready(function(){$(".darkshadow").click(function(){$(".dropdowns").removeClass("shows");});});
