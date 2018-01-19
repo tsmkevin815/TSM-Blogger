@@ -41,7 +41,6 @@ theText = theText.replace(/O\.o/gi, "<img src='https://3.bp.blogspot.com/-dv1aKm
 theText = theText.replace(/-_-/gi, "<img src='https://4.bp.blogspot.com/-d0kXBUxE-VY/WkPfWVH2E-I/AAAAAAAABPg/4zfiVZP_kiAhl63fEBqfa_d95J8sSmIYACLcBGAs/s1600/12-min.png'/>");
 theText = theText.replace(/zzz/gi, "<img src='https://3.bp.blogspot.com/-nne-1AG5C_g/WkPfjaGYfVI/AAAAAAAABPk/Jv_-ZBj6TE4dqWhg9SgjSPsxW2IAg5OXACLcBGAs/s1600/13-min.png'/>");
 theText = theText.replace(/:x/gi, "<img src='https://2.bp.blogspot.com/-QlPPGMNkVJo/WkPf-levWgI/AAAAAAAABPw/IghBac5vs5g2DhQLSgZS_CD-WhP74Vl6QCLcBGAs/s1600/15-min.png'/>");
-theText = theText.replace(/:3/gi, "<img src='https://4.bp.blogspot.com/-glwX7OII5_A/WkPgluxsMkI/AAAAAAAABP4/g4xRIY9idz0QQTNo3da-Krnai3qhNtj2gCLcBGAs/s1600/16-min.png'/>");
 theText = theText.replace(/&lt;3/gi, "<img src='https://2.bp.blogspot.com/-GjQABnYcBYA/WkPhB_jEdpI/AAAAAAAABP8/82_a7hgL5oAboVWEJ_Onv8ank76t_zxfwCLcBGAs/s1600/17-min.png'/>");
 theText = theText.replace(/\(Y\)/gi, "<img src='https://3.bp.blogspot.com/-8IsRUMCPdiM/WkilVKkjHfI/AAAAAAAABSM/5p5TDO5DwqoF8lWVUvoO9Gd1iO-y7jtrgCLcBGAs/s1600/like-min.png'/>");
 theText = theText.replace(/lồn/gi, "***");
