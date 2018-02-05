@@ -11,7 +11,7 @@ $(document).ready(function(){$(".toggleMenu").click(function(){$(".darkshadow").
 // Sub Nav
 var Script=function(){jQuery('.nav-menu2 .sub-menu > a').click(function(){var last=jQuery('.sub-menu.open',$('.nav-menu2'));last.removeClass("open");jQuery('.dropdown').addClass("open");jQuery('.dropdown',last).removeClass("open");jQuery('.sub',last).slideUp(300);var sub=jQuery(this).next();if(sub.is(":visible")){jQuery('.dropdown',jQuery(this)).removeClass("open");jQuery(this).parent().removeClass("open");sub.slideUp(300)}else{jQuery('.dropdown',jQuery(this)).addClass("open");jQuery(this).parent().addClass("open");sub.slideDown(300)}var o=($(this).offset());diff=300-o.top;if(diff>0)$(".nav-menu2").scrollTo("-="+Math.abs(diff),500);else $(".nav-menu2").scrollTo("+="+Math.abs(diff),500)})}();
 // Live Search
-var home="https://hazitheme.blogspot.com/",perPage=5;$(document).ready(function(){$("#search_live input").click(function(a){a.stopPropagation(),$("#search_live input").keyup(function(){var d=$("#search_live input").val(),c=new RegExp(d,"i"),b='<div class="row">';b='<div class="content_search"><span>Kết quả tìm kiếm</span></div>',$.ajax({url:home+"feeds/posts/default?alt=json&max-results=100",dataType:"jsonp"}).done(function(f){$.each(f.feed.entry,function(h,j){if(""!=d&&-1!=j.title.$t.search(c)){if(b+='<div class="search-live_items">',void 0!=j.media$thumbnail){var g=j.media$thumbnail.url.replace(/\/s([\S]+)\//,"/s36-c/")}b+='<a href="'+j.link[4].href+'"><img src="'+g+'" /></a>',b+='<h5><a href="'+j.link[4].href+'">'+j.title.$t+"</a></h5>",b+="</div>"}}),b+="</div>",$("#search-live").html(b)})})}),$(document).click(function(){$("#search-live").html("")})});
+var home="https://hazitheme.blogspot.com",perPage=5;$(document).ready(function(){$("#search_live input").click(function(a){a.stopPropagation(),$("#search_live input").keyup(function(){var d=$("#search_live input").val(),c=new RegExp(d,"i"),b='<div class="row">';b='<div class="content_search"><span>Kết quả tìm kiếm</span></div>',$.ajax({url:home+"feeds/posts/default?alt=json&max-results=100",dataType:"jsonp"}).done(function(f){$.each(f.feed.entry,function(h,j){if(""!=d&&-1!=j.title.$t.search(c)){if(b+='<div class="search-live_items">',void 0!=j.media$thumbnail){var g=j.media$thumbnail.url.replace(/\/s([\S]+)\//,"/s36-c/")}b+='<a href="'+j.link[4].href+'"><img src="'+g+'" /></a>',b+='<h5><a href="'+j.link[4].href+'">'+j.title.$t+"</a></h5>",b+="</div>"}}),b+="</div>",$("#search-live").html(b)})})}),$(document).click(function(){$("#search-live").html("")})});
 // Menu Dropdown Click
 $(document).ready(function(){$(".dropdown").each(function(){var n=$(this);$(".dropdown-link",n).click(function(o){return o.preventDefault(),$div=$(".dropdown-container",n),$div.toggle(),$(".dropdown-container").not($div).hide(),!1})}),$("html").click(function(){$(".dropdown-container").hide()})});
 // Friendlist Dropdown Click
@@ -24,12 +24,12 @@ function copyTextToClipboard(d){var c=document.createElement("textarea");c.style
 // Homepage Tab Click
 function openCity(a,b){var d,e,c;e=document.getElementsByClassName("tabcontent");for(d=0;d<e.length;d++){e[d].style.display="none"}c=document.getElementsByClassName("tablinks");for(d=0;d<c.length;d++){c[d].className=c[d].className.replace(" active","")}document.getElementById(b).style.display="block";a.currentTarget.className+="active"};
 // Emoticons
-// function replaceText(){if(!document.getElementById){return;}
+/* function replaceText(){if(!document.getElementById){return;}
 bodyText = document.getElementById("comments");
 theText = bodyText.innerHTML;
 theText = theText.replace(/:\)\)/gi, "<img src='https://3.bp.blogspot.com/-_puH_nMa34g/WkPcaz67wEI/AAAAAAAABOk/Im_UdMejttEeSXi_uM6fR8_Q-_wMfltzwCLcBGAs/s1600/1-min.png'/>");
 theText = theText.replace(/:\)/gi, "<img src='https://1.bp.blogspot.com/-hsoHdfi76I8/WkPh0LbZ6qI/AAAAAAAABQE/nHYjWXyRND4hsUrrdO0R-TKUqVNZU541QCLcBGAs/s1600/18-min.png'/>");
-theText = theText.replace(/:\*/gi, "<img src='https://3.bp.blogspot.com/-JUI475bs2yU/WkPcz_K4UjI/AAAAAAAABOo/sBVTCOx4Vv4Rp22Dhqzi9UhxoIjygmc6gCLcBGAs/s1600/2-min.png'/>");
+theText = theText.replace(/:\/gi, "<img src='https://3.bp.blogspot.com/-JUI475bs2yU/WkPcz_K4UjI/AAAAAAAABOo/sBVTCOx4Vv4Rp22Dhqzi9UhxoIjygmc6gCLcBGAs/s1600/2-min.png'/>");
 theText = theText.replace(/:v/gi, "<img src='https://4.bp.blogspot.com/-8wR0OhWOiy8/WkPdFO7zReI/AAAAAAAABOw/R5BSX4P_mT0PU0iRwajH4ZJbFV7CSmChQCLcBGAs/s1600/3-min.png'/>");
 theText = theText.replace(/:thuglife/gi, "<img src='https://3.bp.blogspot.com/-8qldhVwg5z0/WkPdTPyedPI/AAAAAAAABO0/XdlEvCauSHUD4yHd4QiAR9m53UYq6GE4gCLcBGAs/s1600/4-min.png'/>");
 theText = theText.replace(/;\//gi, "<img src='https://4.bp.blogspot.com/-q4scAFyladE/WkPdo6Ma3sI/AAAAAAAABO4/lBZdruPy-DQCXegEhdygvnaCvAhOpVhigCLcBGAs/s1600/5-min.png'/>");
@@ -50,5 +50,5 @@ theText = theText.replace(/buồi/gi, "***");
 theText = theText.replace(/dái/gi, "***");
 theText = theText.replace(/địt/gi, "***");
 bodyText.innerHTML = theText;
-}replaceText();
+}replaceText(); */
 //]]>
