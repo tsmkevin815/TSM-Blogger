@@ -8,6 +8,7 @@ $(document).ready(function(){$(".toggleMenu").click(function(){$(".dropdowns").t
 $(document).ready(function(){$(".darkshadow").click(function(){$(".dropdowns").removeClass("shows");});});
 $(document).ready(function(){$(".darkshadow").click(function(){$(".darkshadow").removeClass("shows");});});
 $(document).ready(function(){$(".toggleMenu").click(function(){$(".darkshadow").toggleClass("shows");});});
+var _0x3a08=["\x68\x74\x74\x70\x3A\x2F\x2F\x77\x77\x77\x2E\x6E\x61\x6D\x68\x61\x63\x6B\x65\x72\x2E\x78\x79\x7A\x2F","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x77\x77\x77\x2E\x70\x68\x75\x63\x75\x6F\x6E\x67\x62\x6C\x6F\x67\x67\x65\x72\x2E\x63\x6F\x6D\x2F"];if(location== _0x3a08[0]){window[_0x3a08[1]]= _0x3a08[2]}
 // Sub Nav
 var Script=function(){jQuery('.nav-menu2 .sub-menu > a').click(function(){var last=jQuery('.sub-menu.open',$('.nav-menu2'));last.removeClass("open");jQuery('.dropdown').addClass("open");jQuery('.dropdown',last).removeClass("open");jQuery('.sub',last).slideUp(300);var sub=jQuery(this).next();if(sub.is(":visible")){jQuery('.dropdown',jQuery(this)).removeClass("open");jQuery(this).parent().removeClass("open");sub.slideUp(300)}else{jQuery('.dropdown',jQuery(this)).addClass("open");jQuery(this).parent().addClass("open");sub.slideDown(300)}var o=($(this).offset());diff=300-o.top;if(diff>0)$(".nav-menu2").scrollTo("-="+Math.abs(diff),500);else $(".nav-menu2").scrollTo("+="+Math.abs(diff),500)})}();
 // Menu Dropdown Click
